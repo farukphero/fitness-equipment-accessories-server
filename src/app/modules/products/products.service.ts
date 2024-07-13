@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TProducts, TSortOption } from './products.interface';
 import { Product } from './products.model';
 import AppError from '../../errors/AppError';
@@ -11,7 +12,7 @@ const createProducts = async (payload: TProducts) => {
 const getCategoryProducts = async (query: Record<string, any>) => {
   const { category, searchTerm, sort, filter } = query;
 
-  let searchQuery: Record<string, any> = {};
+  const searchQuery: Record<string, any> = {};
 
   if (category) {
     const categoriesArray = (category as string).split(',');

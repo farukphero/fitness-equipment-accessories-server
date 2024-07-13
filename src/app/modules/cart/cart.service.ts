@@ -1,6 +1,5 @@
 import AppError from '../../errors/AppError';
 import { StatusCodes } from 'http-status-codes';
-import sanitizePayload from '../../middlewares/updateData';
 import { TCart } from './cart.interface';
 import { Cart } from './cart.model';
 import { Product } from '../products/products.model';
